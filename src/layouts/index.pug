@@ -1,0 +1,115 @@
+doctype html
+//
+  Solid State by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+html
+  head
+    title Kairos Center for Well-Being - Home
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //if lte IE 8
+      script(src='assets/js/ie/html5shiv.js')
+    link(rel='stylesheet', href='assets/css/main.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='assets/css/ie9.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='assets/css/ie8.css')
+  body
+    // Page Wrapper
+    #page-wrapper
+      // Header
+      header#header.alt
+        h1
+          a(href='index.html') Kairos Center for Well-being
+        nav
+          a(href='#menu') Menu
+      // Menu
+      nav#menu
+        .inner
+          h2 Menu
+          ul.links
+            li
+              a(href='index.html') Home
+            li
+              a(href='generic.html') Generic
+            li
+              a(href='elements.html') Elements
+            li
+              a(href='#') Log In
+            li
+              a(href='#') Sign Up
+          a.close(href='#') Close
+      // Banner
+      section#banner
+        .inner
+          .logo
+            span.icon.fa-diamond
+          h2 Kairos Center for Well-being
+          p Where need and opportunities meet.
+      // Wrapper
+      section#wrapper
+        each entry, index in data.entries
+          - var sectionNum = index + 1
+          - var classAttr = `wrapper spotlight style${sectionNum}` + (sectionNum%2 === 0 ? ' alt' : '') 
+
+          section(
+            id=`#section-${sectionNum}`
+            class=classAttr
+          )
+            .inner
+              a.image(href='#')
+                img(src='images/pic01.jpg', alt='')
+              .content
+                h2.major #{entry.fields.title}
+                p #{entry.fields.description}
+                a.special(href='#') #{entry.fields.linkText}
+
+      // Footer
+      section#footer.wrapper
+        .inner
+          h2.major Get in touch
+          p
+            | Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.
+          form(method='post', action='#')
+            .field
+              label(for='name') Name
+              input#name(type='text', name='name')
+            .field
+              label(for='email') Email
+              input#email(type='email', name='email')
+            .field
+              label(for='message') Message
+              textarea#message(name='message', rows='4')
+            ul.actions
+              li
+                input.button.special(type='submit', value='Send Message')
+          ul.contact
+            li.fa-home
+              | Untitled Inc
+              br
+              | 									1234 Somewhere Road Suite #2894
+              br
+              | 									Nashville, TN 00000-0000
+            li.fa-phone (000) 000-0000
+            li.fa-envelope
+              a(href='#') information@untitled.tld
+            li.fa-twitter
+              a(href='#') twitter.com/untitled-tld
+            li.fa-facebook
+              a(href='#') facebook.com/untitled-tld
+            li.fa-instagram
+              a(href='#') instagram.com/untitled-tld
+          ul.copyright
+            li © Untitled Inc. All rights reserved.
+            li
+              | Design: 
+              a(href='http://html5up.net') HTML5 UP
+    // Scripts
+    script(src='assets/js/skel.min.js')
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.scrollex.min.js')
+    script(src='assets/js/util.js')
+    //if lte IE 8
+      script(src='assets/js/ie/respond.min.js')
+    script(src='assets/js/main.js')

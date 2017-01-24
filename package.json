@@ -1,0 +1,22 @@
+{
+  "name": "kairos-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "DEBUG=* node -r dotenv/config build.js"
+  },
+  "author": "Leif Bjornson",
+  "license": "ISC",
+  "dependencies": {
+    "contentful-metalsmith": "^0.8.0",
+    "handlebars": "^4.0.6",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^1.7.0",
+    "metalsmith-sass": "^1.4.0",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0"
+  }
+}

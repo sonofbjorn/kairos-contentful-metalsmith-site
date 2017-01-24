@@ -1,0 +1,7 @@
+# excluded dirs
+.vscode/
+node_modules/
+build/
+
+# Private stuffs (env vars and whatnot)!
+.env
