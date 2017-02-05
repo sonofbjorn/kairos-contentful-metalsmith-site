@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "DEBUG=* node -r dotenv/config build.js"
+    "build-css": "node-sass -o build/assets/css src/assets/sass",
+    "build:dev": "DEBUG=* node -r dotenv/config build.js",
+    "dev": "npm run build:dev && npm run build-css"
   },
   "author": "Leif Bjornson",
   "license": "ISC",
@@ -13,10 +15,11 @@
     "handlebars": "^4.0.6",
     "metalsmith": "^2.3.0",
     "metalsmith-layouts": "^1.7.0",
-    "metalsmith-sass": "^1.4.0",
+    "node-sass": "^4.5.0",
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "nodemon": "^1.11.0"
   }
 }

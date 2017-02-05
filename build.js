@@ -5,6 +5,11 @@ const layouts = require('metalsmith-layouts');
 Metalsmith(__dirname)
     .source('./src')
     .destination('./build')
+    .ignore([
+        '**/*.css', // css built with npm script
+        '**/*.scss'
+    ])
+    .clean(true)
     .use(contentful({
         'access_token': process.env.CONTENTFUL_API_KEY,
         'space_id': process.env.CONTENTFUL_SPACE_ID
@@ -12,10 +17,6 @@ Metalsmith(__dirname)
     .use(layouts({
         directory: 'src/layouts',
         engine: 'pug'
-    }))
-    .use(sass({
-        outputDir: 'css',
-        outputStyle: 'expanded'
     }))
     .build(function (err) {
         if (err) console.log(err);
