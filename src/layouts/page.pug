@@ -44,11 +44,24 @@ html
       section#wrapper
         header
           .inner
-            h2 Generic
+            h2 #{data.fields.title}
             p Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.
         // Content
         .wrapper
           .inner
+            if data.fields.healingModalities
+              section#modalities
+                .table-wrapper
+                  table
+                    thead
+                      tr
+                        td Modality
+                        td Description
+                    tbody
+                      each modality in data.fields.healingModalities
+                        tr
+                          td #{modality.fields.title}
+                          td #{modality.fields.description}
             h3.major Lorem ipsum dolor
             p
               | Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.
