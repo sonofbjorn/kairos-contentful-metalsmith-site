@@ -7,6 +7,7 @@
 /* Footer */
 
 	#footer {
+		background-color: _palette(light);
 		.inner {
 			@include padding(5em, 0);
 			@include vendor('display', 'flex');
@@ -20,12 +21,12 @@
 			}
 
 			form {
-				margin: 0 _size(section-spacing, large) 0 0;
-				width: calc(50% - #{_size(section-spacing, large) * 0.5});
+				margin: auto;
+				width: calc(60% - #{_size(section-spacing, large) * 0.5});
 			}
 
-			.contact {
-				width: calc(50% - #{_size(section-spacing, large) * 0.5});
+			.contact { // not used for kairos site
+				width: calc(50% - #{_size(section-spacing, large) * 0.5}); 
 			}
 
 			.copyright {
@@ -60,9 +61,9 @@
 
 		@include breakpoint(large) {
 
-			background-color:		_palette(bg);
+			background-color:		_palette(light);
 
-			background-image:		linear-gradient(to top, transparentize(_palette(bg), 0.2), transparentize(_palette(bg), 0.2)),
+			background-image:		linear-gradient(to top, transparentize(_palette(light), 0.2), transparentize(_palette(light), 0.2)),
 									url('../../images/bg.jpg');
 
 			background-size:		auto,

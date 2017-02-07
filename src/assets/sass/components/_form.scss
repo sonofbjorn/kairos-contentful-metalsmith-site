@@ -93,7 +93,7 @@
 	select {
 		option {
 			color: _palette(fg-bold);
-			background: _palette(bg);
+			background: _palette(light);
 		}
 	}
 
@@ -153,7 +153,7 @@
 				background: _palette(fg-bold);
 				border-color: _palette(fg-bold);
 				content: '\f00c';
-				color: _palette(bg);
+				color: _palette(light);
 			}
 		}
 

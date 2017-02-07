@@ -22,7 +22,7 @@
 			small:				1.75em
 		),
 		wrapper-edges:			(
-			large:				6.5em,
+			large:				6em,
 			medium:				4.75em,
 			small:				2.5em
 		)
@@ -42,13 +42,19 @@
 
 // Palette.
 	$palette: (
-		bg:						#2e3141,
-		fg:						#ffffff,
-		fg-bold:				#ffffff,
-		fg-light:				rgba(255,255,255,0.35),
-		border:					rgba(255,255,255,0.125),
-		border-bg:				rgba(255,255,255,0.025),
-		border2:				rgba(255,255,255,0.25),
-		border2-bg:				rgba(255,255,255,0.075),
-		accent:					#4c5c96
+		light: 					#ffffff,
+		dark: 					#2e3141,
+		bg:						#ffffff,
+		fg:						#2e3141,
+		fg-bold:				#2e3141,
+		fg-light:				rgba(0,0,0,0.35),
+		border:					rgba(0,0,0,0.125),
+		border-bg:				rgba(0,0,0,0.025),
+		border2:				rgba(0,0,0,0.25),
+		border2-bg:				rgba(0,0,0,0.075),
+		border-light:			rgba(255,255,255,0.125),
+		border-bg-light:		rgba(255,255,255,0.025),
+		border2-light:			rgba(255,255,255,0.25),
+		border2-bg-light:		rgba(255,255,255,0.075),
+		accent:					#a0cf67
 	);

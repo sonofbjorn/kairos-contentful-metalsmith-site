@@ -7,7 +7,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: _palette(fg);
+		color: _palette(dark);
 		font-family: _font(family);
 		font-size: 16.5pt;
 		font-weight: _font(weight);
@@ -59,7 +59,7 @@
 			&:before {
 				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
 				border-radius: 100%;
-				border: solid 2px _palette(border);
+				border: solid 2px _palette(border-light);
 				content: '\f105';
 				display: inline-block;
 				font-size: 1.25em;

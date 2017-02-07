@@ -6,8 +6,7 @@ Metalsmith(__dirname)
     .source('./src')
     .destination('./build')
     .ignore([
-        '**/*.css', // css built with npm script
-        '**/*.scss'
+        '**/*.scss' // build with npm script
     ])
     .clean(true)
     .use(contentful({

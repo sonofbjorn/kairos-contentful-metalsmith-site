@@ -12,14 +12,14 @@
 /* Basic */
 
 	body {
-		background-color:		_palette(bg);
+		background-color:		_palette(light);
 		background-image:		url('../../images/bg.jpg');
 		background-size:		cover;
 		background-attachment:	fixed;
 		background-position:	center;
 
 		&:before {
-			background: transparentize(_palette(bg), 0.2);
+			background: transparentize(_palette(light), 0.2);
 			content: '';
 			display: block;
 			height: 100%;
