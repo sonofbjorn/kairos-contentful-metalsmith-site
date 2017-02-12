@@ -85,6 +85,14 @@
 				opacity: 0;
 				visibility: hidden;
 			}
+
+			a {
+				color: _palette(light);
+
+				&[href="#menu"] {
+					box-shadow: inset 0 0 0 2px _palette(border-light);
+				}
+			}
 		}
 
 		@include breakpoint(small) {

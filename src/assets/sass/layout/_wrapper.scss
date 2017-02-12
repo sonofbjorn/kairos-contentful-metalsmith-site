@@ -24,7 +24,8 @@
 			}
 
 			h2 {
-				border-bottom: solid 2px _palette(border);
+				border-bottom: solid 2px _palette(border-light);
+				color: _palette(light);
 				font-size: 2em;
 				margin-bottom: _size(element-margin) * 0.4;
 				padding-bottom: _size(element-margin) * 0.2;
@@ -98,16 +99,16 @@
 	}
 
 	.wrapper {
-		background-color: _palette(dark);
+		background-color: _palette(accent);
 		margin: _size(wrapper-edges, large) 0;
 		position: relative;
-		@include wrapper-edges-color(_palette(dark));
+		@include wrapper-edges-color(_palette(accent));
 
-		a, h2, p {
+		a, h2, h3, p {
 			color: _palette(light);
 		}
 
-		h2.major {
+		h2.major, h3.major {
 			border-color: _palette(border-light);
 		}
 

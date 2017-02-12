@@ -6,8 +6,31 @@
 
 /* Footer */
 
+	/// Sets the colors of the footer's top edges.
+	/// @param {string} $color Color.
+	@mixin wrapper-edges-color($color: black) {
+		&:before {
+			background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" style="fill:#{$color};" /></svg>');
+		}
+	}
+
 	#footer {
 		background-color: _palette(light);
+		margin: _size(wrapper-edges, large) 0 0 0;
+		position: relative;
+		@include wrapper-edges-color(_palette(light));
+		&:before {
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			height: _size(wrapper-edges, large);
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: (_size(wrapper-edges, large) * -1);
+		}
+
 		.inner {
 			@include padding(5em, 0);
 			@include vendor('display', 'flex');
@@ -63,9 +86,6 @@
 
 			background-color:		_palette(light);
 
-			background-image:		linear-gradient(to top, transparentize(_palette(light), 0.2), transparentize(_palette(light), 0.2)),
-									url('../../images/bg.jpg');
-
 			background-size:		auto,
 									cover;
 
@@ -78,6 +98,13 @@
 		}
 
 		@include breakpoint(medium) {
+			&:before {
+				height: _size(wrapper-edges, medium);
+			}
+
+			&:before {
+				top: (_size(wrapper-edges, medium) * -1);
+			}
 		 	margin-top: (_size(wrapper-edges, medium) * -1);
 		 	padding-top: _size(wrapper-edges, medium);
 
@@ -103,6 +130,15 @@
 		}
 
 		@include breakpoint(small) {
+
+			&:before, &:after {
+				height: _size(wrapper-edges, small);
+			}
+
+			&:before {
+				top: (_size(wrapper-edges, small) * -1);
+			}
+
 		 	margin-top: (_size(wrapper-edges, small) * -1);
 		 	padding-top: _size(wrapper-edges, small);
 
