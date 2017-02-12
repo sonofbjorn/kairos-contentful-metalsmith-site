@@ -31,6 +31,12 @@
 			top: (_size(wrapper-edges, large) * -1);
 		}
 
+		&.alt {
+			&:before {
+				@include vendor('transform', 'scaleX(-1)');
+			}
+		}
+
 		.inner {
 			@include padding(5em, 0);
 			@include vendor('display', 'flex');
