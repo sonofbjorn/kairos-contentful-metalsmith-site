@@ -1,6 +1,7 @@
 const Metalsmith = require('metalsmith');
 const contentful = require('contentful-metalsmith');
 const layouts = require('metalsmith-layouts');
+const permalinks  = require('metalsmith-permalinks');
 
 Metalsmith(__dirname)
     .source('./src')
@@ -12,6 +13,9 @@ Metalsmith(__dirname)
     .use(contentful({
         'access_token': process.env.CONTENTFUL_API_KEY,
         'space_id': process.env.CONTENTFUL_SPACE_ID
+    }))
+    .use(permalinks({
+        relative: false
     }))
     .use(layouts({
         directory: 'src/layouts',
