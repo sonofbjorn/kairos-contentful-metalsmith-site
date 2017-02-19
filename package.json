@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node build.js && node-sass -o build/assets/css src/assets/sass",
     "build-css": "node-sass -o build/assets/css src/assets/sass",
     "build:dev": "DEBUG=* node -r dotenv/config build.js",
     "dev": "npm run build:dev && npm run build-css"
