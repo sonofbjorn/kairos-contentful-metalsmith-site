@@ -51,7 +51,8 @@ html
       section#wrapper
         each entry, index in data.entries
           - var sectionNum = index + 1
-          - var classAttr = `wrapper spotlight style${sectionNum}` + (sectionNum%2 === 0 ? ' alt' : '') 
+          - var classAttr = `wrapper spotlight style${sectionNum}` + (sectionNum%2 === 0 ? ' alt' : '')
+          - var page = entry.fields.page
 
           section(
             id=`#section-${sectionNum}`
@@ -63,7 +64,8 @@ html
               .content
                 h2.major #{entry.fields.title}
                 p #{entry.fields.description}
-                a.special(href='#') #{entry.fields.linkText}
+                if page
+                  a.special(href=page.fields.title.replace(/\s+/g, '-').toLowerCase()) #{entry.fields.linkText}
 
       // Footer
       section#footer
@@ -85,7 +87,7 @@ html
               li
                 input.button.special(type='submit', value='Send Message')
           ul.copyright
-            li © Untitled Inc. All rights reserved.
+            li © Kairos Center for Well-Being. All rights reserved.
             li
               | Design: 
               a(href='http://html5up.net') HTML5 UP
