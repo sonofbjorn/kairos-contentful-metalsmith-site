@@ -1,0 +1,77 @@
+{
+    "sys": {
+        "space": {
+            "sys": {
+                "type": "Link",
+                "linkType": "Space",
+                "id": "2s4ypu9zq73o"
+            }
+        },
+        "id": "5NiIf2ZimswQOUqwcuqMmy",
+        "type": "Entry",
+        "createdAt": "2017-01-28T14:44:13.187Z",
+        "updatedAt": "2017-02-10T01:47:27.583Z",
+        "revision": 4,
+        "contentType": {
+            "sys": {
+                "type": "Link",
+                "linkType": "ContentType",
+                "id": "page"
+            }
+        },
+        "locale": "en-US"
+    },
+    "fields": {
+        "title": "Therapeutic Massage",
+        "content": "## Healing Modalities\nKairos offers... this will be some blurb about healing modalities.\n",
+        "healingModalities": [{
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4pFORCg2pySiaKGYISQmo2"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "DD3eHkZnYyWQQ0Oy260mI"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3uJZGMkTgkq6aAU2s4wKCw"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2FDSmdXBteYsYi2USeyS6M"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4hqW7WcItaUGYMsIc2OGy4"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7pDH7tASl20Y64oi8CmEWc"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1WQ1oxE3JewYi0KkWQoCQk"
+            }
+        }, {
+            "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1vZ6BPlaY4U6q0kyME4EOk"
+            }
+        }]
+    }
+}
