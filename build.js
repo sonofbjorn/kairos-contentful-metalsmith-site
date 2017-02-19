@@ -13,7 +13,12 @@ Metalsmith(__dirname)
     .clean(true)
     .use(contentful({
         'access_token': process.env.CONTENTFUL_API_KEY,
-        'space_id': process.env.CONTENTFUL_SPACE_ID
+        'space_id': process.env.CONTENTFUL_SPACE_ID,
+        "common": {
+            "pages": {
+                "content_type": "page"
+            }
+        }
     }))
     .use(permalinks({
         relative: false

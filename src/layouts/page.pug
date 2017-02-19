@@ -5,7 +5,7 @@ doctype html
   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 html
   head
-    title Kairos Center for Well-being - Therapeutic Massage
+    title Kairos Center for Well-being - #{data.fields.title}
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     //if lte IE 8
@@ -25,21 +25,7 @@ html
         nav
           a(href='#menu') Menu
       // Menu
-      nav#menu
-        .inner
-          h2 Menu
-          ul.links
-            li
-              a(href='index.html') Home
-            li
-              a(href='generic.html') Generic
-            li
-              a(href='elements.html') Elements
-            li
-              a(href='#') Log In
-            li
-              a(href='#') Sign Up
-          a.close(href='#') Close
+      include ../partials/menu.pug
       // Wrapper
       section#wrapper
         header

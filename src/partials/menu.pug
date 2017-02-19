@@ -1,0 +1,11 @@
+nav#menu
+    .inner
+        h2 Menu
+        ul.links
+            li
+                a(href='/') Home
+            each page in common.pages.items
+                - var link = '/' + page.fields.title.replace(/\s+/g, '-').toLowerCase()
+                li
+                    a(href=link) #{page.fields.title}
+        a.close(href='#') Close
