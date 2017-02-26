@@ -2,6 +2,7 @@ const Metalsmith = require('metalsmith');
 const contentful = require('contentful-metalsmith');
 const debug = require('metalsmith-debug');
 const layouts = require('metalsmith-layouts');
+const markdown = require('metalsmith-markdown');
 const permalinks  = require('metalsmith-permalinks');
 
 Metalsmith(__dirname)
@@ -27,6 +28,7 @@ Metalsmith(__dirname)
         directory: 'src/layouts',
         engine: 'pug'
     }))
+    .use(markdown())
     .use(debug())
     .build(function (err) {
         if (err) console.log(err);

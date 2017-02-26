@@ -23,6 +23,7 @@
   "devDependencies": {
     "dotenv": "^4.0.0",
     "metalsmith-debug": "^1.1.0",
+    "metalsmith-markdown": "^0.2.1",
     "nodemon": "^1.11.0"
   }
 }
