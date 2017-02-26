@@ -47,7 +47,7 @@
 
 				background-color:		_palette(dark);
 
-				background-image:		linear-gradient(to top, transparentize(_palette(dark), 0.2), transparentize(_palette(light), 0.2)),
+				background-image:		linear-gradient(to top, transparentize(_palette(dark), 0.2), transparentize(_palette(dark), 0.2)),
 										url('../../images/bg.jpg');
 
 				background-size:		auto,

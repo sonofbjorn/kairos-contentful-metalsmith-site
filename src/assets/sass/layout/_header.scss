@@ -24,6 +24,7 @@
 				'visibility #{_duration(transition)}'
 			));
 			border-bottom: 0;
+			color: _palette(dark);
 			font-size: 0.8em;
 			margin-bottom: 0;
 			opacity: 1;
@@ -48,6 +49,7 @@
 
 			a {
 				border: 0;
+				color: _palette(dark);
 				display: inline-block;
 				padding: 0 1em;
 

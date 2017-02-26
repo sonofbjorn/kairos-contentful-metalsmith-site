@@ -49,6 +49,10 @@
 				width: 100%;
 			}
 
+			h2.major {
+				color: _palette(dark);
+			}			
+
 			form {
 				margin: auto;
 				width: calc(60% - #{_size(section-spacing, large) * 0.5});
