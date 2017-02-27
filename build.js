@@ -28,7 +28,9 @@ Metalsmith(__dirname)
         directory: 'src/layouts',
         engine: 'pug'
     }))
-    .use(markdown())
+    .use(markdown({
+        smartypants: true
+    }))
     .use(debug())
     .build(function (err) {
         if (err) console.log(err);

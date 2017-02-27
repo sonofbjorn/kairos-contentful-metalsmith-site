@@ -21,7 +21,8 @@
 		var	$window = $(window),
 			$body = $('body'),
 			$header = $('#header'),
-			$banner = $('#banner');
+			$banner = $('#banner'),
+			$contactForm = $('#contact-form');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -60,6 +61,28 @@
 				});
 
 			}
+
+		// Contact Form.
+		$contactForm.submit(function(e) {
+			e.preventDefault();
+			$.ajax({
+				url: 'https://formspree.io/kairoscenter@gmail.com',
+				method: 'POST',
+				data: $(this).serialize(),
+				dataType: 'json',
+				beforeSend: function() {
+					$contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+				},
+				success: function(data) {
+					$contactForm.find('.alert--loading').hide();
+					$contactForm.append('<div class="alert alert--success">Message sent!</div>');
+				},
+				error: function(err) {
+					$contactForm.find('.alert--loading').hide();
+					$contactForm.append('<div class="alert alert--error">Oops, there was an error.</div>');
+				}
+			});
+		});
 
 		// Menu.
 			var $menu = $('#menu');

@@ -56,6 +56,10 @@
 			form {
 				margin: auto;
 				width: calc(60% - #{_size(section-spacing, large) * 0.5});
+
+				input.is-hidden {
+					visibility: hidden;
+				}
 			}
 
 			.contact { // not used for kairos site

@@ -1,0 +1,20 @@
+.inner
+  h2.major Get in touch
+  p Have a question or just want to say hello? I'd love to hear from you!
+  form#contact-form(method='post', action='https://formspree.io/kairoscenter@gmail.com')
+    .field
+      label(for='name') Name
+      input#name(type='text', name='name')
+    .field
+      label(for='email') Email
+      input#email(type='email', name='email')
+    .field
+      label(for='message') Message
+      textarea#message(name='message', rows='4')
+    input.is-hidden(type='text' name='gotcha')
+    input(type="hidden" name='_subject' value='Message from kairoscenter.net')
+    ul.actions
+      li
+        input.special(type='submit', value='Send Message')
+  ul.copyright
+    li © Kairos Center for Well-being. All rights reserved.
