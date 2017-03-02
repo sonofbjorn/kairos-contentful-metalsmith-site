@@ -226,7 +226,7 @@
 			}
 
 			.inner {
-				@include padding(3em, 3em);
+				padding: 3em;
 				width: 100%;
 			}
 
@@ -261,7 +261,7 @@
 			}
 
 			.inner {
-				@include padding(2em, 2em);
+				@include padding(4em, 2em);
 			}
 
 			&.spotlight {

@@ -106,8 +106,8 @@
 			background-position:	center,
 									center;
 
-		 	margin-top: (_size(wrapper-edges, large) * -1);
-		 	padding-top: _size(wrapper-edges, large);
+		 	// margin-top: (_size(wrapper-edges, large) * -1);
+		 	// padding-top: _size(wrapper-edges, large);
 
 		}
 
@@ -119,8 +119,7 @@
 			&:before {
 				top: (_size(wrapper-edges, medium) * -1);
 			}
-		 	margin-top: (_size(wrapper-edges, medium) * -1);
-		 	padding-top: _size(wrapper-edges, medium);
+		 	margin-top: (_size(wrapper-edges, medium) * -0.1);
 
 			.inner {
 				@include padding(3em, 3em);
@@ -153,8 +152,8 @@
 				top: (_size(wrapper-edges, small) * -1);
 			}
 
-		 	margin-top: (_size(wrapper-edges, small) * -1);
-		 	padding-top: _size(wrapper-edges, small);
+		 	// margin-top: (_size(wrapper-edges, small) * -1);
+		 	// padding-top: _size(wrapper-edges, small);
 
 			.inner {
 				@include padding(2em, 2em);
